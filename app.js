@@ -12,7 +12,5 @@ for (let i = 1; i < 11; i++) {
 
 console.log(salida);
 
-fs.writeFile(`tabla-${base}.txt`, salida, (err) => {
-    if (err) throw err;
-    console.log(`archivo tabla-${base}.txt creado`);
-});
+fs.writeFileSync(`tabla-${base}.txt`, salida);
+console.log(`archivo tabla-${base}.txt creado`);
